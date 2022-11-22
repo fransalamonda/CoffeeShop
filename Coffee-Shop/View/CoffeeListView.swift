@@ -40,10 +40,10 @@ struct CoffeeListView: View {
         NavigationView {
             List(coffeSearchResults) { result in
                 NavigationLink(destination: {
-                    
+                    CoffeeDetailView(coffeeDetails: result)
                 }){
                     Image("\(result.image)")
-                        .frame(width: 2, height: 3)
+                        .frame(width: 1, height: 3)
                     Text("\(result.name)")
                         .font(.title2)
                        // .multilineTextAlignment(.leading)
